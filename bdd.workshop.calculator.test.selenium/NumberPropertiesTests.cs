@@ -25,7 +25,7 @@ namespace bdd.workshop.calculator.test.selenium
             var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
             var numberXPath = @"//input[@id='TheNumber']";
             var submitButton = "//input[@type='submit']";
-            Driver.Url = "https://bdd-workshop-the-calculator.azurewebsites.net/NumberProperties";
+            Driver.Url = "https://bddworkshopcalculatorwebugr.azurewebsites.net/NumberProperties";
             var inputA = FindElement(numberXPath, wait);
             var button = FindElement(submitButton, wait);
             inputA.SendKeys(number.ToString());

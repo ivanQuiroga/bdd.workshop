@@ -33,6 +33,9 @@ namespace bdd.workshop.calculator.web.Controllers
                 case ("/"):
                     ViewData["result"] = Operator.Divide(calculator.A.TheNumber, calculator.B.TheNumber);
                     break;
+                case ("sqrt"):
+                    ViewData["result"] = Operator.Sqrt(calculator.A.TheNumber, calculator.B.TheNumber);
+                    break;
                 default:
 
                     break;
