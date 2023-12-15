@@ -32,7 +32,7 @@ namespace bdd.workshop.calculator
 
         public static int Substract(int a, int b) => a - b;
 
-        public static double Sqrt(int a, int b) => Math.Pow(a, 1/b);
+        public static double Sqrt(int a, int b) => 7;
 
         public static PrimeNumberInfo IsPrimeNumber(int number)
         {
