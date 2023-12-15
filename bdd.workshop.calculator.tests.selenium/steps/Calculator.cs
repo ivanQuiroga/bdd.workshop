@@ -93,12 +93,11 @@ namespace bdd.workshop.calculator.tests.selenium.steps
         }
 
 
-        [When(@"I take the root of first number using the second number as the base.")]
+        [When(@"I take the sqrt of first number")]
         public void WhenIRootFirstNumberBySecondNumber()
         {
             var firstNumber = _scenarioContext.Get<int>("FirstNumber");
-            var secondNumber = _scenarioContext.Get<int>("SecondNumber");
-            _scenarioContext.Add("Result", EvaluateOperation(firstNumber, secondNumber, "sqrt"));
+            _scenarioContext.Add("Result", EvaluateOperation(firstNumber, 0, "sqrt"));
         }
 
 
