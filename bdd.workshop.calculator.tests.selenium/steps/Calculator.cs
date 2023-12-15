@@ -92,9 +92,6 @@ namespace bdd.workshop.calculator.tests.selenium.steps
             _scenarioContext.Add("Result", EvaluateOperation(firstNumber, secondNumber, "/"));
         }
 
-
-<<<<<<< Updated upstream
-=======
         [When(@"I take the sqrt of first number")]
         public void WhenIRootFirstNumberBySecondNumber()
         {
@@ -102,8 +99,6 @@ namespace bdd.workshop.calculator.tests.selenium.steps
             _scenarioContext.Add("Result", EvaluateOperation(firstNumber, 0, "sqrt"));
         }
 
-
->>>>>>> Stashed changes
         [Then(@"the result is (.*)")]
         public void ThenTheResultIs(double result)
         {

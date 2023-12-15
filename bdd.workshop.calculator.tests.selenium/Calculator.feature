@@ -43,14 +43,10 @@ Scenario: Division of two numbers returning non integer value
 	Then the result is 2.5
 	And displayed first name is 10
 	And displayed second name is 4
-<<<<<<< Updated upstream
-=======
-
 
 Scenario: Root two numbers
 	Given the first number is 4
 	When I take the sqrt of first number
 	Then the result should be 2
 	And displayed first name is 4
->>>>>>> Stashed changes
 	
