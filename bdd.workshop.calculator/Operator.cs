@@ -6,7 +6,7 @@ namespace bdd.workshop.calculator
 {
     public static class Operator
     {
-        public static void CommandManager(string command,out int a,out int b, out string operation)
+        public static void CommandManager(string command, out int a, out int b, out string operation)
         {
 
             var parts = command.Split(" ");
@@ -32,7 +32,9 @@ namespace bdd.workshop.calculator
 
         public static int Substract(int a, int b) => a - b;
 
-        public static double Sqrt(int a, int b) => 7;
+        public static double Root(int a, int b) => Math.Pow(a, 1 / b);
+
+        public static double Sqrt(int a) => Math.Sqrt(a);
 
         public static PrimeNumberInfo IsPrimeNumber(int number)
         {
