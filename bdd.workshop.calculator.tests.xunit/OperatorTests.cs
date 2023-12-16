@@ -28,8 +28,8 @@ namespace bdd.workshop.calculator.tests.xunit
         public void NegativeSquareRoot()
         {
             double baseInt = -1;
-            double root = 0;
-            Assert.True(Operator.SqrRoot(baseInt) == root);
+            var ex = Assert.Throws<InvalidOperationException>(() => Operator.SqrRoot(baseInt));
+            Assert.Equal("Argument must be greater than or equal to zero.", ex.Message);
         }
 
         [Fact]
