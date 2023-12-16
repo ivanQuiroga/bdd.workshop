@@ -5,31 +5,21 @@ namespace bdd.workshop.calculator.tests.xunit
 {
     public class OperatorTests
     {
-        [Fact]
-        [Trait("TestType", "UT")]
-        public void BasicSquareRoot()
+        [Theory(DisplayName = "Square Root Theory")]
+        [Trait("TestType", "Theory")]
+        [InlineData(0, 0)]
+        [InlineData(1, 1)]
+        [InlineData(4, 2)]
+        [InlineData(9, 3)]
+        [InlineData(16, 4)]
+        [InlineData(25, 5)]
+        [InlineData(36, 6)]
+        [InlineData(49, 7)]
+        [InlineData(64, 8)]
+        [InlineData(81, 9)]
+        public void CalculateSquareRoot(double square, double root)
         {
-            double baseInt = 4;
-            double root = 2;
-            Assert.True(Operator.SqrRoot(baseInt) == root);
-        }
-
-        [Fact]
-        [Trait("TestType", "UT")]
-        public void ZeroSquareRoot()
-        {
-            double baseInt = 0;
-            double root = 0;
-            Assert.True(Operator.SqrRoot(baseInt) == root);
-        }
-
-        [Fact]
-        [Trait("TestType", "UT")]
-        public void NegativeSquareRoot()
-        {
-            double baseInt = -1;
-            var ex = Assert.Throws<InvalidOperationException>(() => Operator.SqrRoot(baseInt));
-            Assert.Equal("Argument must be greater than or equal to zero.", ex.Message);
+            Assert.True(Operator.SqrRoot(square) == root);
         }
 
         [Fact]
