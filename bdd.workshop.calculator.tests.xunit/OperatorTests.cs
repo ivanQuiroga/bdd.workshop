@@ -17,6 +17,7 @@ namespace bdd.workshop.calculator.tests.xunit
         [InlineData(49, 7)]
         [InlineData(64, 8)]
         [InlineData(81, 9)]
+        [InlineData(-1, double.MinValue)]
         public void CalculateSquareRoot(double square, double root)
         {
             Assert.True(Operator.SqrRoot(square) == root);
