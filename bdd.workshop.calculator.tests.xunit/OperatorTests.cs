@@ -20,7 +20,15 @@ namespace bdd.workshop.calculator.tests.xunit
         [InlineData(-1, double.MinValue)]
         public void CalculateSquareRoot(double square, double root)
         {
-            Assert.True(Operator.SqrRoot(square) == root);
+            if (square < 0)
+            {
+                var ex = Assert.Throws<InvalidOperationException>(() => Operator.SqrRoot(square));
+                Assert.Equal("Argument must be greater than or equal to zero.", ex.Message);
+            }
+            else
+            {
+                Assert.True(Operator.SqrRoot(square) == root);
+            }
         }
 
         [Fact]
