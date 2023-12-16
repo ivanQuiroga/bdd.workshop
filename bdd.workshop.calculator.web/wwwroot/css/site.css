@@ -69,3 +69,34 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+
+.container-calc {
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.result-container-calc {
+    margin: 20px 0;
+}
+
+.btn-calc {
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #777;
+    border-radius: 10px;
+    margin: 2px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-calc:hover {
+    background-color: #555;
+}
+
+.btn-calc:nth-child(9) {
+    grid-row: 5 / span 2;
+}

@@ -7,19 +7,36 @@
 
 <h2>Do an Operation</h2>
 @using (Html.BeginForm("Operate","Calculator"))
-            {
+            {                       
 <fieldset>
-    <legend>Calculator</legend>
-
-    <div class="editor-field">
-        First Number: @Html.TextBoxFor(model => model.A.TheNumber);
-    </div>
-    <div class="editor-field">
-        Operator:@Html.TextBoxFor(model => model.Command);
-    </div>
-    <div class="editor-field">
-        Second Number: @Html.TextBoxFor(model => model.B.TheNumber);
-    </div>
+        <div class="container-calc">
+            <div class="input-container-calc">
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.A.TheNumber, new { placeholder = "Number 1" })
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Command, new { placeholder = "Operator" })
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.B.TheNumber, new { placeholder = "Number 2" })
+                </div>
+                <!--<input type="text" id="result" placeholder="Resultado" readonly>-->
+            </div>
+            <div class="result-container-calc">
+                <button type="button" class="btn-calc" onclick="calculate('+')">+</button>
+                <button type="button" class="btn-calc" onclick="calculate('-')">-</button>
+                <button type="button" class="btn-calc" onclick="calculate('x')">x</button>
+            </div>
+            <div class="result-container-calc">
+                <button type="button" class="btn-calc" onclick="calculate('/')">/</button>
+                <button type="button" class="btn-calc" onclick="calculate('sqrt')">√</button>
+                <!--<button type="button" class="btn-calc" onclick="calculateResult()">=</button>-->
+            </div>
+            <div class="result-container-calc">
+                <button type="button" class="btn-calc" onclick="clearAll()">AC</button>
+                <input type="submit" class="btn-calc" value="=" />
+            </div>
+        </div>
 </fieldset>
-                <input type="submit" value="Do The operation"/>
+               
             }
