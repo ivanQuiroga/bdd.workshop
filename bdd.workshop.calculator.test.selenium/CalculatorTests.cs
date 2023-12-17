@@ -37,6 +37,8 @@ namespace bdd.workshop.calculator.test.selenium
         [InlineData(20, "/", 4, 5)]
         [InlineData(20, "-", 4, 16)]
         [InlineData(10, "/", 4, 2.5)]
+        [InlineData(9, "sqrt", 0, 3)]
+        [InlineData(-1, "sqrt", 0, double.MinValue)]
         public void OperationsTheory(int a, string operation, int b, double result)
         {
             EvaluateOperation(a, b, operation, result);
