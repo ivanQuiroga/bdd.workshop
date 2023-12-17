@@ -93,7 +93,7 @@ namespace bdd.workshop.calculator.tests.selenium.steps
         }
 
 
-        [When(@"I take the sqrt of first number")]
+        [When(@"I take the square root of first number")]
         public void WhenIRootFirstNumberBySecondNumber()
         {
             var firstNumber = _scenarioContext.Get<int>("FirstNumber");
