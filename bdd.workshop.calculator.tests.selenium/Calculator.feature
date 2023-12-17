@@ -53,5 +53,5 @@ Scenario: Square root of a number
 Scenario: Square root of a negative number
 	Given the first number is -1
 	When I take the square root of first number
-	Then the result should be NaN
+	Then the result is NaN
 	And displayed first name is -1
