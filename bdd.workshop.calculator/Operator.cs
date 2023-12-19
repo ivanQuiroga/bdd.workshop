@@ -34,7 +34,7 @@ namespace bdd.workshop.calculator
 
         public static double Root(int a, int b) => Math.Pow(a, 1 / b);
 
-        public static double Sqrt(int a) => Math.Sqrt(a);
+        public static double SqrRoot(double a) => Math.Sqrt(a);
 
         public static PrimeNumberInfo IsPrimeNumber(int number)
         {
