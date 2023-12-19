@@ -27,7 +27,13 @@ namespace bdd.workshop.calculator.test.selenium
             var theResult = "//td[@id='theResult']";
             var outputResultString = FindElement(theResult, wait).Text;
             Assert.True(double.TryParse(outputResultString, out double outputResult));
-            Assert.True(result == outputResult);
+            if(double.IsNaN(result))
+            {
+                Assert.True(double.IsNaN(outputResult));
+            } else
+            {
+                Assert.True(result == outputResult);
+            }
         }
 
         [Theory(DisplayName ="Operations Theory")]
@@ -37,8 +43,9 @@ namespace bdd.workshop.calculator.test.selenium
         [InlineData(20, "/", 4, 5)]
         [InlineData(20, "-", 4, 16)]
         [InlineData(10, "/", 4, 2.5)]
+        [InlineData(0, "sqrt", 0, 0)]
         [InlineData(9, "sqrt", 0, 3)]
-        [InlineData(-1, "sqrt", 0, double.MinValue)]
+        [InlineData(-1, "sqrt", 0, double.NaN)]
         public void OperationsTheory(int a, string operation, int b, double result)
         {
             EvaluateOperation(a, b, operation, result);
