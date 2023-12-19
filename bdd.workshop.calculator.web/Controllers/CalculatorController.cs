@@ -44,6 +44,13 @@ namespace bdd.workshop.calculator.web.Controllers
                         sqrtResult = double.NaN;
                     }
                     ViewData["result"] = sqrtResult;
+                    ViewData["b"] = 2;
+                    break;
+                case ("root"):
+                    ViewData["result"] = Operator.Root(calculator.A.TheNumber, calculator.B.TheNumber);
+                    break;
+                case ("^"):
+                    ViewData["result"] = Operator.Pow(calculator.A.TheNumber, calculator.B.TheNumber);
                     break;
                 default:
                     break;

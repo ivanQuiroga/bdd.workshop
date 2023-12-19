@@ -7,6 +7,6 @@ namespace bdd.workshop.calculator.web.Models
 {
     public class Number
     {
-        public int TheNumber { get; set; }
+        public double TheNumber { get; set; }
     }
 }

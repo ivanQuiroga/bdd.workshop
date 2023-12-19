@@ -24,15 +24,16 @@ namespace bdd.workshop.calculator
             }
             operation = parts[1];
         }
-        public static int Add(int a, int b) => a + b;
 
-        public static int Multiply(int a, int b) => a * b;
+        public static double Add(double a, double b) => a + b;
 
-        public static double Divide(int a, int b) => ((double)a) / ((double)b);
+        public static double Multiply(double a, double b) => a * b;
 
-        public static int Substract(int a, int b) => a - b;
+        public static double Divide(double a, double b) => a / b;
 
-        public static double Root(int a, int b) => Math.Pow(a, 1 / b);
+        public static double Substract(double a, double b) => a - b;
+
+        public static double Root(double a, double b) => Math.Pow(a, (1 / b));
 
         public static double SqrRoot(double square)
         {
@@ -43,6 +44,8 @@ namespace bdd.workshop.calculator
 
             return Math.Sqrt(square);
         }
+
+        public static double Pow(double a, double b) => Math.Pow(a, b);
 
         public static PrimeNumberInfo IsPrimeNumber(int number)
         {

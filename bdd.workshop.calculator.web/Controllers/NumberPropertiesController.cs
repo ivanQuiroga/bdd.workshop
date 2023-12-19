@@ -17,7 +17,7 @@ namespace bdd.workshop.calculator.web.Controllers
         public IActionResult Properties(Models.Number number)
         {
             ViewData["Number"] = number.TheNumber;
-            var primeNumberInfo = Operator.IsPrimeNumber(number.TheNumber);
+            var primeNumberInfo = Operator.IsPrimeNumber((int) number.TheNumber);
             switch (primeNumberInfo)
             {
                 case PrimeNumberInfo.Yes:
