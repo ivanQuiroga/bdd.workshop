@@ -44,8 +44,14 @@ Scenario: Division of two numbers returning non integer value
 	And displayed first name is 10
 	And displayed second name is 4
 
-Scenario: Sqrt of number
+Scenario: Square root of a number
 	Given the first number is 4
-	When I take the sqrt of first number
+	When I take the square root of first number
 	Then the result should be 2
 	And displayed first name is 4
+	
+Scenario: Square root of a negative number
+	Given the first number is -1
+	When I take the square root of first number
+	Then the result should be NaN
+	And displayed first name is -1
