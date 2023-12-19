@@ -72,7 +72,7 @@ namespace bdd.workshop.calculator.tests.tdd.steps
         [When(@"I take the square root of first number")]
         public void WhenITakeSquareRootOfFirstNumber()
         {
-            var firstNumber = _scenarioContext.Get<int>("FirstNumber");
+            var firstNumber = _scenarioContext.Get<double>("FirstNumber");
             try
             {
                 _scenarioContext.Add("Result", Operator.SqrRoot(firstNumber));
