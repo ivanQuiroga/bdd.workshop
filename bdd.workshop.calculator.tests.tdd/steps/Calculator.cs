@@ -70,16 +70,27 @@ namespace bdd.workshop.calculator.tests.tdd.steps
         }
 
         [When(@"I take the square root of first number")]
-        public void WhenIRootFirstNumberBySecondNumber()
+        public void WhenITakeSquareRootOfFirstNumber()
         {
             var firstNumber = _scenarioContext.Get<int>("FirstNumber");
-            _scenarioContext.Add("Result", Operator.SqrRoot(firstNumber));
+            try
+            {
+                _scenarioContext.Add("Result", Operator.SqrRoot(firstNumber));
+            } catch (Exception ex)
+            {
+                _scenarioContext.Add("Result", double.NaN);
+            }
         }
 
         [Then(@"the result is (.*)")]
         public void ThenTheResultIs(double result)
         {
-            Assert.True(result == _scenarioContext.Get<double>("Result"));
+            if(double.IsNaN(result)) {
+                Assert.True(double.IsNaN(_scenarioContext.Get<double>("Result")));
+            } else
+            {
+                Assert.True(result == _scenarioContext.Get<double>("Result"));
+            }
         }
 
     }

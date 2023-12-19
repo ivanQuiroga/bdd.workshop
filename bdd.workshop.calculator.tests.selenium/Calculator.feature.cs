@@ -410,7 +410,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I take the square root of first number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 56
- testRunner.Then("the result should be NaN", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the result is NaN", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 57
  testRunner.And("displayed first name is -1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
